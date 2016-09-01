@@ -1,0 +1,30 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testImage"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="testImage.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="346.962" Width="480.759">
+
+    <Grid Margin="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="287*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Margin="2" Grid.Row="1" Grid.ColumnSpan="2">
+            <Image x:Name="image" Margin="2" Grid.Column="0" Grid.Row="0"  Grid.RowSpan="2">
+                <i:Interaction.Behaviors>
+                    <ei:MouseDragElementBehavior/>
+                </i:Interaction.Behaviors>
+            </Image>
+        </Viewbox>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Stretch" Margin="2,0,2,2" VerticalAlignment="Bottom" Click="button_Click" Grid.Column="1" Height="23" />
+    </Grid>
+</Window>

@@ -9,6 +9,7 @@
         Title="MainWindow" Height="424.793" Width="525" WindowStartupLocation ="CenterScreen" >
     <Window.Resources>
         <RotateTransform x:Key="rotateControl" Angle="{Binding ElementName=slide1,Path=Value}" CenterX="50" CenterY="50"></RotateTransform>
+        <ScaleTransform x:Key="scaleControl" ScaleX="2" ScaleY="2"></ScaleTransform>
     </Window.Resources>
     <StackPanel>
         <TextBox x:Name="textBox1" Margin="5" Text="{Binding Value, ElementName=slide1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
@@ -19,10 +20,10 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock>The first row of a grid</TextBlock>
-            <Viewbox x:Name="viewBoxMain" Grid.Row="1" HorizontalAlignment="Left" Stretch="Fill" StretchDirection="Both" RenderTransform="{StaticResource rotateControl }" >
-                <Canvas Width="253" Height="117">
+            <Viewbox x:Name="viewBoxMain" Grid.Row="1" HorizontalAlignment="Left" Stretch="Fill" StretchDirection="Both" RenderTransform="{StaticResource rotateControl }">
+                <Canvas Width="253" Height="117" >
                     <Ellipse Fill="Yellow" Stroke="Blue" Canvas.Left="10" Canvas.Top="30"
-                             Width="100" Height="50" HorizontalAlignment="Left"></Ellipse>
+                             Width="100" Height="50" HorizontalAlignment="Left" ></Ellipse>
                     <Rectangle Fill="Yellow" Stroke="Blue" Canvas.Left="30" Canvas.Top="20"
                                Width="100" Height="50" HorizontalAlignment="Left"></Rectangle>
                 </Canvas>
