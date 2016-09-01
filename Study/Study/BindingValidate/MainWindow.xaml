@@ -4,10 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BindingValidate"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="424.793" Width="525" WindowStartupLocation ="CenterScreen" >
+    <Window.Resources>
+        <RotateTransform x:Key="rotateControl" Angle="{Binding ElementName=slide1,Path=Value}" CenterX="50" CenterY="50"></RotateTransform>
+    </Window.Resources>
     <StackPanel>
-        <TextBox x:Name="textBox1" Margin="5"></TextBox>
-        <Slider x:Name="slide1" Minimum="0" Maximum="100" Margin="5"></Slider>
+        <TextBox x:Name="textBox1" Margin="5" Text="{Binding Value, ElementName=slide1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Slider x:Name="slide1" Minimum="0" Maximum="100" Margin="5" ></Slider>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock>The first row of a grid</TextBlock>
+            <Viewbox x:Name="viewBoxMain" Grid.Row="1" HorizontalAlignment="Left" Stretch="Fill" StretchDirection="Both" RenderTransform="{StaticResource rotateControl }" >
+                <Canvas Width="253" Height="117">
+                    <Ellipse Fill="Yellow" Stroke="Blue" Canvas.Left="10" Canvas.Top="30"
+                             Width="100" Height="50" HorizontalAlignment="Left"></Ellipse>
+                    <Rectangle Fill="Yellow" Stroke="Blue" Canvas.Left="30" Canvas.Top="20"
+                               Width="100" Height="50" HorizontalAlignment="Left"></Rectangle>
+                </Canvas>
+            </Viewbox>
+        </Grid>
+        <Label DataContext="{x:Static sys:DateTime.Now}" Content="{Binding Second}" ></Label>
     </StackPanel>
 </Window>

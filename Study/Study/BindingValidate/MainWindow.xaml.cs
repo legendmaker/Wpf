@@ -24,5 +24,10 @@ namespace BindingValidate
         {
             InitializeComponent();
         }
+
+        private void slide1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            viewBoxMain.RenderTransform = new RotateTransform(slide1.Value);
+        }
     }
 }
