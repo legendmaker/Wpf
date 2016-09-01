@@ -20,8 +20,8 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock>The first row of a grid</TextBlock>
-            <Viewbox x:Name="viewBoxMain" Grid.Row="1" HorizontalAlignment="Left" Stretch="Fill" StretchDirection="Both" RenderTransform="{StaticResource rotateControl }">
-                <Canvas Width="253" Height="117" >
+            <Viewbox x:Name="viewBoxMain" Grid.Row="1" HorizontalAlignment="Left" Stretch="Fill" StretchDirection="Both" >
+                <Canvas Width="253" Height="117" RenderTransform="{StaticResource rotateControl }" RenderTransformOrigin="0.1,0.1" >
                     <Ellipse Fill="Yellow" Stroke="Blue" Canvas.Left="10" Canvas.Top="30"
                              Width="100" Height="50" HorizontalAlignment="Left" ></Ellipse>
                     <Rectangle Fill="Yellow" Stroke="Blue" Canvas.Left="30" Canvas.Top="20"
