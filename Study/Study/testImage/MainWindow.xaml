@@ -68,50 +68,52 @@
 
     <Grid Margin="1">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox Margin="1" Grid.Row="1" OpacityMask="#FF0E2EBD" Grid.ColumnSpan="2">
+        <Border Margin="1" Grid.Row="1" Grid.ColumnSpan="2" Background="Black" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+
+        </Border>
+        <Viewbox Margin="1" Grid.Row="1" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Image x:Name="image" Margin="2"  >
                 <i:Interaction.Behaviors>
                     <ei:MouseDragElementBehavior/>
                 </i:Interaction.Behaviors>
             </Image>
         </Viewbox>
-        <Border BorderBrush="White" BorderThickness="2" Margin="2" Grid.Column="1" Opacity="0.8" Background="White" CornerRadius="5">
+        <Border BorderBrush="White" BorderThickness="2" Margin="2" Grid.Column="1" Opacity="0.8" CornerRadius="5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF414141" BlurRadius="8"/>
             </Border.Effect>
-            <Grid Margin="1" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="20"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button x:Name="button" Content="加载" Margin="3" Click="button_Click" BorderBrush="#FF696973" Foreground="White" Style="{DynamicResource ButtonStyle}" BorderThickness="0" FontSize="16" Grid.Row="1" >
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FF696973"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                    <Button.OpacityMask>
-                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FFB27373" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.OpacityMask>
-                </Button>
-            </Grid>
         </Border>
+        <Border Background="Black" Opacity="0.5" Margin="2"  Grid.Column="1" CornerRadius="5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"></Border>
+        <Grid Margin="1"  Grid.Column="1"  OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button" Content="加载" Margin="5" Click="button_Click" BorderBrush="#FF696973" Foreground="White" Style="{DynamicResource ButtonStyle}" BorderThickness="0" FontSize="16" Grid.Row="1" Grid.ColumnSpan="3" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF696973"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.OpacityMask>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFB27373" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.OpacityMask>
+            </Button>
+        </Grid>
     </Grid>
 </Window>
