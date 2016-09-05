@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOpacity", "TestOpacity\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testGeometry", "testGeometry\testGeometry.csproj", "{325D6180-99EB-4B77-9F16-500C601AA5B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestVisual", "TestVisual\TestVisual.csproj", "{E66E8631-CF46-41BC-B3A4-A44DD3DEFF57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{325D6180-99EB-4B77-9F16-500C601AA5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{325D6180-99EB-4B77-9F16-500C601AA5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{325D6180-99EB-4B77-9F16-500C601AA5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66E8631-CF46-41BC-B3A4-A44DD3DEFF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66E8631-CF46-41BC-B3A4-A44DD3DEFF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66E8631-CF46-41BC-B3A4-A44DD3DEFF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66E8631-CF46-41BC-B3A4-A44DD3DEFF57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
