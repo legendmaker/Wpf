@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="308" Margin="1" VerticalAlignment="Top" Width="516"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="154" Margin="46,29,0,0" VerticalAlignment="Top" Width="132" FontSize="18">
+            <ListBox.Triggers>
+                <EventTrigger RoutedEvent="ListBoxItem.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard HandoffBehavior="Compose">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize"
+                                             BeginTime="0:0:0.5" Duration="0:0:0.2" To="30"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </ListBox.Triggers>
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF696973"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+            <ListBoxItem Foreground="White" Content="Green">
+            </ListBoxItem>
+            <ListBoxItem Foreground="White">Blue</ListBoxItem>
+            <ListBoxItem Foreground="White">Yello</ListBoxItem>
+            <ListBoxItem Foreground="White">Red</ListBoxItem>
+        </ListBox>
     </Grid>
 </Window>
