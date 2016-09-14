@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TurningTableAnimation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="480" Width="480">
     <Grid>
-        
+        <Border BorderBrush="Black" BorderThickness="1" Margin="1" Background="#FF696973" Grid.ColumnSpan="3"/>
+        <Grid Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Canvas Margin="1" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5, 0.5">
+                <Path RenderTransformOrigin="0.5,0.5" Data="M150.142,299.54199 L217.563,299.54199 217.563,336.70001 150.142,336.70001 z M308.73199,130.758 L355.09999,130.758 355.09999,187.653 308.73199,187.653 z M0.5,130.758 L46.867996,130.758 46.867996,187.653 0.5,187.653 z M175.142,43.658002 L190.026,43.658002 190.026,149.179 302.73199,149.179 302.73199,163.968 190.026,163.968 190.026,293.54199 175.142,293.54199 175.142,163.968 52.867996,163.968 52.867996,149.179 175.142,149.179 z M150.142,0.5 L217.563,0.5 217.563,37.657999 150.142,37.657999 z" Fill="DeepSkyBlue" Height="337.2" Canvas.Left="10" Stretch="Fill" Stroke="Black" Canvas.Top="10" Width="355.6">
+                    <Path.RenderTransform>
+                        <RotateTransform></RotateTransform>
+                    </Path.RenderTransform>
+                    <Path.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" Duration="0:0:1">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Path.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" To="360" Duration="0:0:2" RepeatBehavior="Forever">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </Path.Triggers>
+                </Path>
+            </Canvas>
+        </Grid>
     </Grid>
 </Window>
