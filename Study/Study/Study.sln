@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurningTableAnimation", "Tu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock", "Clock\Clock.csproj", "{D5887544-C5A8-4F56-8C2E-192EA16DBD8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryWpfTest", "ClassLibraryWpfTest\ClassLibraryWpfTest.csproj", "{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,14 @@ Global
 		{D5887544-C5A8-4F56-8C2E-192EA16DBD8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D5887544-C5A8-4F56-8C2E-192EA16DBD8C}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5887544-C5A8-4F56-8C2E-192EA16DBD8C}.Release|x86.Build.0 = Release|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Debug|x86.Build.0 = Debug|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C103C41-3A4A-4C5A-AECB-EED107FEBC15}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

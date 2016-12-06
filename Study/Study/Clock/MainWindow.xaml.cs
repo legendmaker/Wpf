@@ -36,7 +36,7 @@ namespace Clock
         public MainWindow()
         {
             InitializeComponent();
-            textblockTime.DataContext = this;
+ //           textblockTime.DataContext = this;
             _timer.Interval = new TimeSpan(1);
             _timer.Tick += _timer_Tick;
             _timer.Start();

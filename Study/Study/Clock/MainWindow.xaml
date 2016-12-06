@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBlock x:Name="textblockTime" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=CurrentTime, UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold" FontSize="21.333" Foreground="#FF1BCF12" Margin="85.598,103.668,102.717,129.348">
+        <TextBlock x:Name="textblockTime" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=CurrentTime,RelativeSource={RelativeSource AncestorType=Window},UpdateSourceTrigger=PropertyChanged}" FontWeight="Bold" FontSize="21.333" Foreground="#FF1BCF12" Margin="85.598,103.668,102.717,129.348">
             <TextBlock.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>

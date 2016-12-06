@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOpacity"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Background="#FF696973">
+        Title="MainWindow" Height="350" Width="525" Background="{x:Null}">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -63,15 +63,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Border CornerRadius="5" Margin="10" BorderThickness="2" BorderBrush="White" Opacity="0.8">
+    <Grid Background="White">
+        <Border CornerRadius="5" Margin="10" BorderThickness="1" BorderBrush="White">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF414141" BlurRadius="8"/>
             </Border.Effect>
-            <Border Background="Black" Opacity="0.5" Margin="0" CornerRadius="5">
+            <Border Margin="1" CornerRadius="5" Opacity="0.5" Background="Black">
+            
             </Border>
         </Border>
-        <Grid Margin="10">
+        <Grid Margin="62,60,104,54">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
